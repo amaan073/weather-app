@@ -1,0 +1,380 @@
+/*
+-->
+
+        MAIN SECTION > WEATHER HIGHLIGHTS
+
+<---
+*/
+
+.hl-icon {
+    height: 47px;
+    width: auto;
+}
+
+.mainSection>div {
+    width: 100%;
+}
+
+.Highlights {
+    width: 100%;
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12.5px;
+    column-gap: 12.5px;
+}
+
+.Highlights>div.box {
+    background-color: #ffffff10;
+}
+
+
+.additionalInfo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 12.5px;
+}
+
+.additionalInfo>div {
+    flex: 1;
+    background-color: #ffffff10;
+}
+
+.additionalInfo>.box>div:last-child {
+    gap: 30px !important; 
+} 
+
+.aqi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.aqi>div:nth-child(1) {
+    color:var(--light-text);
+}
+
+.aqi>div:nth-child(2) {
+    background-color: transparent;
+    color: white;
+    padding: 3px 15px;
+    border-radius: 25px;
+}
+
+.aqi>div[data-aqi-value="1"] {
+    background-color: #3fc83f;
+}
+.aqi>div[data-aqi-value="2"] {
+    background-color: rgb(241, 241, 0);
+}
+.aqi>div[data-aqi-value="3"] {
+    background-color: rgb(255, 126, 0);
+}
+.aqi>div[data-aqi-value="4"] {
+    background-color: red;
+}
+.aqi>div[data-aqi-value="5"] {
+    background-color: rgb(143, 63, 151);
+}
+
+
+
+.aqi-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 32px 0 0;
+    gap: 30px;
+}
+
+
+
+.pollutant {
+    text-align: center;
+}
+
+.pollutant>div:first-child {
+    color: var(--light-text);
+    font-size: var(--sm-font);
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+/*
+-->
+
+        MAIN SECTION > WEATHER HIGHLIGHTS > sunrise and sunset
+
+<---
+*/
+
+.sun-card>div:first-child {
+    color: var(--light-text);
+    height: 25px;
+}
+
+.sun-card>div:last-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 32px 0 0;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+.sunrise-box,.sunset-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+
+
+.s-time>div:first-child {
+    color: var(--light-text);
+    font-size: var(--sm-font);
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+/*
+-->
+
+        MAIN SECTION > WEATHER HIGHLIGHTS > humidity
+
+<---
+*/
+
+
+
+.humidity>div:first-child {
+    color: var(--light-text);
+}
+
+.humidity>div:last-child {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+/*
+-->
+
+        MAIN SECTION > WEATHER HIGHLIGHTS > pressure
+
+<---
+*/
+
+
+
+ .pressure>div:first-child {
+    color: var(--light-text);
+}
+
+.pressure>div:last-child {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+/*
+-->
+
+        MAIN SECTION > WEATHER HIGHLIGHTS > visibility
+
+<---
+*/
+
+
+
+.visibility>div:first-child {
+    color: var(--light-text);
+}
+
+.visibility>div:last-child {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+/*
+-->
+
+        MAIN SECTION > WEATHER HIGHLIGHTS > feels like
+
+<---
+*/
+
+
+
+.feels-like>div:first-child {
+    color: var(--light-text);
+}
+
+.feels-like>div:last-child {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+-->
+
+        MAIN SECTION > hourly forecast
+
+<---
+*/
+
+
+
+.hourly-forecast{
+    margin-top: 10px;
+}
+
+
+.hourly-forecast>div {
+    padding-top: 10px;
+    overflow-x: auto;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+/* when hourly forecast has overflow  */
+.hourly-forecast>div.overflow {
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+/* when the div is grabbed or clicked */
+.hourly-forecast>div.active {
+    background-color: rgba(255, 255, 255, 0.06);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1.01);
+}
+
+
+.hourly-forecast>div::-webkit-scrollbar {display: none;}
+
+.hf-cards-list {
+    display: flex;
+    gap: 16px;
+}
+
+
+li.hf-card {
+    min-width: 123px;
+    text-align: center;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.hf-card.box {
+    padding-inline: 0;
+}
+
+/* hourly temperature icon */
+.hf-icon.ht {
+    height: 66px;
+    margin: 0;
+}
+
+
+
+.hf-icon {
+    height: 40px;
+    margin: 16px 0;
+}
+
+
+
+
+
+/*
+-->
+
+        MAIN SECTION > footer
+
+<---
+*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    gap: 0 35px;
+    align-items: center;
+}
+
+.footer div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    border: thin solid transparent;
+    line-height: 0rem;  
+    text-underline-offset: 2px;
+}
+
+
+.footer a:link {
+    color:rgb(79, 79, 255);
+}
+.footer a:visited {
+    color: rgb(238, 120, 238);
+}
+.footer a:active {
+    color: red;
+}
+
+
+.footer img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    margin-inline-end: 10px;
+}

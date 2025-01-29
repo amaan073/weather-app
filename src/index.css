@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --box-bg : #ffffff10;
+  --light-text : #c8c6c6;
+  --body-bg : #1A1E3C;
+  --sm-font : 0.87rem;
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+.box {
+  border-radius: 25px;
+  padding: 25px;
+  background-color: var(--box-bg);
+}
+
+.md-text {
+  font-size: clamp(1.5rem,1.7vw,2rem);
+}
+
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 25px ;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff40;
+  border-radius: 25px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff70;
+}
+
+
+

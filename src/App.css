@@ -1,0 +1,416 @@
+/*
+ -->
+
+        APP STYLES
+
+<--
+*/
+
+
+
+.App {
+    width: 100%;
+    max-width: 1600px;
+    margin-inline:auto;
+}
+
+.App.loading {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    display: grid;
+    place-items: center;
+}
+
+.App.loading>* {
+    display: none;
+}
+ 
+/* loading animation*/
+.App.loading::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 20px dotted white;
+    background-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    animation: spin 1s linear infinite ;
+}
+
+.error {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: larger;
+}
+
+
+main {
+    padding : 0 32px;
+    margin-top: 92px;
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);  
+    gap: 32px;
+    align-items: flex-start;  
+}
+
+
+h2 {
+    font-weight: 500;
+}
+
+
+
+
+
+
+/*
+-->
+
+        media queries
+
+<---
+ */
+
+
+
+
+@media (max-width:1440px) {
+    .md-text {
+        font-size: clamp(1.32rem,1.68vw,1.7rem);
+    }
+
+    .hl-icon {
+        height: 40px;
+    }
+
+    header {
+        padding: 16px;
+    }
+
+    main {
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .aqi-info, .sun-card>div {
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .sun-card>div:last-child,
+    .sunrise-box,.sunset-box  {
+        gap: 10px;
+    }
+}
+
+
+@media (max-width:1250px) {
+    .Highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .hl-icon {
+        height: 50px;
+    }
+
+    .md-text {
+        font-size: clamp(1.9rem,1vw,2.4rem);
+    }
+
+
+    .aqi-info,
+    .sun-card>div {
+        justify-content: space-around;
+    }
+
+    .sun-card>div:last-child,
+    .sunrise-box,.sunset-box  {
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width:1024px)  {
+    .md-text {
+        font-size: clamp(1.2rem,2.5vw,1.9rem);
+    }
+
+    header {
+        justify-content: right;
+        gap: 16px;
+    }
+
+    main {
+        grid-template-columns: 300px minmax(0,1fr);
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .searchBar {
+        min-width: 250px;
+    }
+
+    .searchResult {
+        min-width: 325px;
+    }
+
+    .currTemp {
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+    .currWeatherIcon {
+        width: 75px;
+    }
+
+    .aqi-info {
+        display: flex;
+        gap: 15px;
+    }
+
+    .hl-icon {
+        height: 40px;
+    }
+
+    .sunrise-box,.sunset-box {
+        gap: 12px;
+    }
+
+    .sun-card>div:last-child {
+        gap: 10px;
+    }
+
+    .additionalInfo {
+        flex-wrap: wrap;
+    }
+    
+
+    li.hf-card {
+        min-width: 105px;
+    }
+    
+    .hf-card.box {
+       padding: 20px;
+       padding-inline: 0;
+    }
+ 
+    
+
+    
+}
+
+
+@media (max-width:768px)  {
+   main {
+        display: block;
+    }
+
+   header {
+        justify-content: flex-end;
+        padding: 16px 16px;
+        gap: 0px;
+    }
+
+
+   .sideSection {
+        position: static;
+    }
+
+    .searchBar {
+        height: 150vh;
+        height: 150vh;
+        max-height: none;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background: white;
+        clip-path: circle(21px at calc(100% - 90px) 38px);
+        transition: clip-path 800ms ease;  
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .searchBar.active {
+        visibility: visible;
+        clip-path: circle(150%);
+        opacity: 1;
+    }
+    html:has(.searchBar.active) ::-webkit-scrollbar    {
+        display: none;
+    }
+
+    .searchBar>.searchInput{
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-bottom: thin solid lightgray;
+        color: black;
+    }
+
+    .searchInput>input {
+        font-size: inherit;
+        flex: 0.9;
+    }
+    
+    .searchIcon {
+        display: none;
+    }
+    
+    .searchInput button {
+        all: unset;
+        height: 45px;
+        width: 45px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .arrow-icon {
+        display: block;
+        width: 25px;
+        height: auto;
+    }
+    
+    .searchBar>.searchResult{
+        all: unset;
+    }
+
+    .search-view-btn {
+        display: grid;
+    }
+
+    .searchBar.searching::after {
+        border-color: black;
+        border-bottom-color: transparent;
+    }
+
+
+   .currentLocationBox {
+        width: 45px;
+        height: 45px;
+        clip-path: circle(45%);
+    }
+
+   .currentLocationBox>span {
+        display: none;
+    }
+
+   .currTemp {
+        font-size:4rem;
+   }
+
+   .currWeatherIcon {
+        margin-inline: auto;
+        width: 100px;
+   }
+
+   .mainSection {
+        margin: 16px 0 0;
+   }
+
+   .md-text {
+        font-size: clamp(1.38rem,4.55vw,1.6rem)
+   }
+
+   .hl-icon {
+        height: 40px;
+   }
+
+
+   .pollutant>div:first-child {
+        margin: 0;
+   }
+
+   .sun-card>div:last-child {
+        justify-content: space-around;
+        gap: 30px;
+   }
+
+   .additionalInfo {
+        flex-wrap: wrap;
+   }
+
+   
+}
+
+
+@media (max-width: 480px) {
+
+    .md-text {
+        font-size: clamp(1.1rem,4.5vw ,1.6rem);
+    }
+
+    .currTemp    {
+        font-size: clamp(3.3rem,15.5vw,4rem);
+    }
+    .currWeatherIcon {
+        min-width: 80px;
+        max-width: 100px;
+        width: 30%;
+    }
+
+    .aqi-info {
+        display: grid;
+        grid-template-columns: 0.8fr 1fr 1fr;
+    }
+
+    .aqi-info>svg {
+        justify-self: center;
+        grid-row:span 2;
+    }
+    
+    .pollutant {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: left;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .sun-card>div:last-child,
+    .sunrise-box,.sunset-box  {
+        gap: 8px;
+    }
+
+
+    .highlights-container.box  {
+        padding: 25px 16px;
+    }
+
+    .additionalInfo .md-text {
+        font-size: clamp(1.5rem, 4.5vw, 1.6rem);
+    }
+
+    .footer p,
+    .footer div:last-child {
+        font-size: 0.85rem;
+    }
+}
+
+
+@media(hover: hover) {
+
+    .currentLocationBox:hover {
+        background-color: #0e7205;
+    }
+    .search-view-btn:hover {
+        background-color: #ffffff42;
+    }
+    .searchResult li:hover :is(p,span) {
+        color: rgb(0, 94, 255);
+    }
+    .searchResult li:hover svg {
+        fill: rgb(0, 94, 255) ;
+    }
+}

@@ -1,0 +1,121 @@
+/*
+ -->
+
+        sideSection style > CURRENT WEATHER
+
+<---
+*/
+
+.sideSection{
+    position: sticky;
+    top:93px;  
+}
+
+
+.currentWeatherBox {
+    width: 100%;
+}
+
+.currentWeatherBox>h2 {
+    line-height:1rem;
+    margin-top:10px
+}
+
+.currTempBox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.currTemp {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.currWeatherIcon {
+    width: 100px;
+    height: auto;
+    margin-inline: auto;
+}
+
+.currWeatherIcon>img {
+    width: 140%;
+    height: auto;
+    margin: -12%;
+}
+
+.currentWeatherBox>p {
+    font-size:1.2rem;
+    line-height:1.4rem;
+}
+
+hr {
+    margin: 15px 0;
+}
+
+.meta li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.meta li:first-child {
+    margin-bottom: 9px;
+}
+
+/*
+ -->
+
+        sideBox style > 5 DAYS FORECAST
+
+<---
+*/
+
+
+
+.daily-forecast>h2 {
+    margin:10px 0;
+}
+
+
+.df-card {
+    background-color: var(--box-bg);
+    width: 100%;
+}
+
+
+.df-list>li {
+    display: flex;
+    align-items: center;
+}
+
+.df-list>li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
+.df-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+}
+
+.df-info>img {
+    width: 50px;
+    height: auto;
+    margin: -10px;
+    position: relative;
+    top: -1.5px;
+}
+
+.df-list>li>p {
+    color: var(--light-text);
+    flex: 1;
+    text-align: right;
+}
